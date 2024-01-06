@@ -19,9 +19,10 @@ Run these commands in order in your home directory:
 1. `sudo apt-get install ripgrep` (might differ in distros)
 2. `git clone --depth 1 https://github.com/kubgus/nvim ~/.config/nvim`
 3. `git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim`
-4. `sudo curl -L https://github.com/neovim/neovim/releases/download/v0.9.5/nvim-linux64.tar.gz > /bin`
-5. `sudo tar xvzf /bin/nvim-linux64.tar.gz`
-6. `sudo rm /bin/nvim-linux64.tar.gz`
+4. `curl -L https://github.com/neovim/neovim/releases/download/v0.9.5/nvim-linux64.tar.gz > nvim-linux64.tar.gz`
+5. `tar xvzf nvim-linux64.tar.gz`
+6. `rm nvim-linux64.tar.gz`
+7. `sudo mv nvim-linux64 /bin`
 7. `sudo ln -s /bin/nvim-linux64/bin/nvim ./nvim`
 8. `nvim ~/.config/nvim`
 After this, `nvim` should be open in the config directory. Run these **vim** commands in order: *(ignore runtime errors for now)*
