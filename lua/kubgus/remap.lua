@@ -18,5 +18,5 @@ vim.g.mapleader = " "
 -- NeoVim Shortcuts
 ------------------------------------------------------
 
--- Netrw easy access
+-- Netrw easy access (project-view)
 map("n", "<leader>pv", cmd("Ex"))
