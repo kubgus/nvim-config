@@ -14,8 +14,18 @@ My personal NeoVim configuration files.
 - [ ] undotree
 - [ ] lsp
 
-# setup nvim
-1. go to https://github.com/neovim/neovim/releases
-1. download the latest release of nvim
-1. extract the file in '/bin' using 'sudo tar xvzf ...'
-1. 'ln -s .../bin/nvim ./nvim'
+# setup
+Run these commands in order in your home directory:
+1. `sudo apt-get install ripgrep` (might differ in distros)
+2. `git clone --depth 1 https://github.com/kubgus/nvim ~/.config/nvim`
+3. `git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim`
+4. `sudo curl -L https://github.com/neovim/neovim/releases/download/v0.9.5/nvim-linux64.tar.gz > /bin`
+5. `sudo tar xvzf /bin/nvim-linux64.tar.gz`
+6. `sudo rm /bin/nvim-linux64.tar.gz`
+7. `sudo ln -s /bin/nvim-linux64/bin/nvim ./nvim`
+8. `nvim ~/.config/nvim`
+After this, `nvim` should be open in the config directory. Run these **vim** commands in order: *(ignore runtime errors for now)*
+1. `:so lua/kubgus/remap.lua` (do this with all files in `kubgus` **except** `init.lua`)
+2. `:so lua/kubgus/init.lua`
+3. `:PackerSync`
+4. `:so after/plugin/theme.lua` (do this for all files in `plugin`)
