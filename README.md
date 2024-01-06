@@ -23,8 +23,9 @@ Run these commands in order in your home directory:
 5. `tar xvzf nvim-linux64.tar.gz`
 6. `rm nvim-linux64.tar.gz`
 7. `sudo mv nvim-linux64 /bin`
-7. `sudo ln -s /bin/nvim-linux64/bin/nvim ./nvim`
-8. `nvim ~/.config/nvim`
+8. `sudo ln -s /bin/nvim-linux64/bin/nvim ./nvim`
+9. `nvim ~/.config/nvim`
+<br/>
 After this, `nvim` should be open in the config directory. Run these **vim** commands in order: *(ignore runtime errors for now)*
 1. `:so lua/kubgus/remap.lua` (do this with all files in `kubgus` **except** `init.lua`)
 2. `:so lua/kubgus/init.lua`
