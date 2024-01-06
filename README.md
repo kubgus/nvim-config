@@ -26,9 +26,8 @@ Run these commands in order in your home directory:
 8. `sudo ln -s /bin/nvim-linux64/bin/nvim /bin/nvim`
 9. `nvim ~/.config/nvim`
 
-After this, `nvim` should be open in the config directory. Run these **vim** commands in order: *(ignore runtime errors for now)*
+Ignore runtime errors (press Enter multiple times) and follow these instrustions to correctly load the configuration:
 
-1. `:so lua/kubgus/remap.lua` (do this with all files in `kubgus` **except** `init.lua`)
-2. `:so lua/kubgus/init.lua`
-3. `:PackerSync`
-4. `:so after/plugin/theme.lua` (do this for all files in `plugin`)
+1. Navigate to `./lua/kubgus` and open files one by one, running `:so` each time (if you get an error, skip the file and return to it after completing the rest)
+2. Run `:PackerSync` anywhere in the environment
+3. Navigate to `./after/plugin` and run the `:so` command in the same fashion as the previous step
