@@ -3,7 +3,7 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
 	-- Packer can manage itself
-	use 'wbthomason/packer.nvim'
+	use('wbthomason/packer.nvim')
 	
 	-- Telescope (fuzzy-finder)
 	use {
@@ -13,11 +13,41 @@ return require('packer').startup(function(use)
 	}
 
 	-- Color theme
-	use "bluz71/vim-nightfly-colors"
+	use("bluz71/vim-nightfly-colors")
 
 	-- Treesitter (code highlighter)
 	use {
 		'nvim-treesitter/nvim-treesitter',
 		{ run=':TSUpdate' }
 	}
+
+	-- Undo tree
+	use("mbbill/undotree")
+
+	-- Git functions
+	use("tpope/vim-fugitive")
+
+	-- LSP (autocomplete)
+	use {
+		'VonHeikemen/lsp-zero.nvim',
+		branch = 'v3.x',
+		requires = {
+			--- Uncomment these if you want to manage the language servers from neovim
+			{'williamboman/mason.nvim'},
+			{'williamboman/mason-lspconfig.nvim'},
+    			-- LSP Support
+  		  	{'neovim/nvim-lspconfig'},
+    			-- Autocompletion
+    			{'hrsh7th/nvim-cmp'},
+    			{'hrsh7th/cmp-nvim-lsp'},
+    			{'L3MON4D3/LuaSnip'},
+  		}
+	}
+
+	-- LSP Language server deps
+	use {
+ 	   "williamboman/mason.nvim",
+	   "williamboman/mason-lspconfig.nvim",
+	   "neovim/nvim-lspconfig",
+   	}
 end)

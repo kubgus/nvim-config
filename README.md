@@ -6,6 +6,9 @@ My personal NeoVim configuration files.
 - nvim 9.0+
 - ripgrep
 - packer
+- node.js (& npm)
+
+> Don't forget to `sudo apt-get update`
 
 ## features
 - [x] theme
