@@ -6,11 +6,6 @@ local function map(mode, lhs, rhs, opts)
 	vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
-local function cmd(inp)
-	local res =  ":" .. inp .. "<CR>"
-	return res
-end
-
 -- Change leader to space
 vim.g.mapleader = " "
 
@@ -18,10 +13,10 @@ vim.g.mapleader = " "
 -- NeoVim Shortcuts
 ------------------------------------------------------
 
--- Netrw easy access (project-view)
-map("n", "<leader>pv", cmd("Ex"))
+-- Netrw easy access (project-overview)
+map("n", "<leader>po", ":Ex<CR>")
 
--- Middle-page scrolling
+-- Visual move
 map("v", "J", ":m '>+1<CR>gv=gv")
 map("v", "K", ":m '<-2<CR>gv=gv")
 
@@ -44,10 +39,7 @@ map("n", "<leader>y", "\"+y")
 map("v", "<leader>y", "\"+y")
 map("n", "<leader>Y", "\"+Y")
 
--- ESC remap
-map("x", "<C-c>", "Esc")
-
 -- Forbidden remaps
-map("n", "<C-a>", "a")
-map("i", "<C-a>", "<C-c>V")
-map("v", "<C-a>", "<C-c>")
+map("n", "<C-c>", "V")
+map("v", "<C-c>", "<C-c>a")
+map("i", "<C-c>", "<C-c>")
