@@ -3,10 +3,9 @@
 My personal NeoVim configuration files.
 
 ## prerequisites
-- nvim 9.0+
-- ripgrep
-- packer
-- node.js (& npm)
+- nvim not installed (installation happens later)
+- ripgrep installed
+- node.js (& npm) installed
 
 > Don't forget to `sudo apt-get update`
 
