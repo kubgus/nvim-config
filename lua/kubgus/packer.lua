@@ -50,4 +50,8 @@ return require('packer').startup(function(use)
 	   "williamboman/mason-lspconfig.nvim",
 	   "neovim/nvim-lspconfig",
    	}
+
+    use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+        require("toggleterm").setup()
+    end}
 end)
