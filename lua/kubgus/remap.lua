@@ -60,3 +60,8 @@ map("n", "<C-l>", ":wincmd l<CR>")
 -- Terminal
 map("n", "<leader>t", ":ToggleTerm<CR>")
 map("t", "<C-e>", "<C-\\><C-n>:q<CR>")
+
+-- Search and replace
+map("n", "fa", ":%s/")
+map("n", "ff", ":+s/")
+map("n", "fh", ":s/")
