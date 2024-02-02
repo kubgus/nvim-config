@@ -10,11 +10,13 @@ My personal NeoVim configuration files.
 > ***Note:*** Don't forget to `sudo apt-get update`
 
 ## features
-- [x] theme
+- [x] lsp
 - [x] treesitter
 - [x] telescope
 - [x] undotree
-- [x] lsp
+- [x] fugitive
+- [x] custom theme
+- [x] lualine
 
 # setup
 Run the `setup.sh` script in your home directory.
