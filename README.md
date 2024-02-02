@@ -13,10 +13,15 @@ My personal NeoVim configuration files.
 - [x] theme
 - [x] treesitter
 - [x] telescope
-- [ ] undotree
-- [ ] lsp
+- [x] undotree
+- [x] lsp
 
 # setup
+Run the `setup.sh` script in your home directory.
+
+or
+
+
 Run these commands in order in your home directory:
 1. `sudo apt-get install ripgrep` (might differ in distros)
 2. `git clone --depth 1 https://github.com/kubgus/nvim ~/.config/nvim`

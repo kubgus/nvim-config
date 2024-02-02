@@ -47,6 +47,8 @@ map("i", "<C-c>", "<C-c>")
 -- Tabs
 map("n", "tj", ":tabnext<CR>")
 map("n", "tk", ":tabnext -<CR>")
+map("n", "th", ":tabnext -<CR>")
+map("n", "tl", ":tabnext +<CR>")
 map("n", "tn", ":tabnew<CR>")
 
 -- Panes (alternative for <C-w>)
