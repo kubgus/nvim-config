@@ -7,7 +7,7 @@ My personal NeoVim configuration files.
 - ripgrep installed
 - node.js (& npm) installed
 
-> Don't forget to `sudo apt-get update`
+> ***Note:*** Don't forget to `sudo apt-get update`
 
 ## features
 - [x] theme
@@ -19,11 +19,13 @@ My personal NeoVim configuration files.
 # setup
 Run the `setup.sh` script in your home directory.
 
-or
-
+*or*
 
 Run these commands in order in your home directory:
-1. `sudo apt-get install ripgrep` (might differ in distros)
+
+> ***Note:*** Installing `ripgrep` may work differently in some distros
+
+1. `sudo apt-get install ripgrep`
 2. `git clone --depth 1 https://github.com/kubgus/nvim ~/.config/nvim`
 3. `git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim`
 4. `curl -L https://github.com/neovim/neovim/releases/download/v0.9.5/nvim-linux64.tar.gz > nvim-linux64.tar.gz`
@@ -34,6 +36,8 @@ Run these commands in order in your home directory:
 9. `nvim ~/.config/nvim`
 
 Ignore runtime errors (press Enter multiple times) and follow these instrustions to correctly load the configuration:
+
+> ***Important:*** This part is required even if installed with `setup.sh`
 
 1. Navigate to `./lua/kubgus` and open files one by one, running `:so` each time (if you get an error, skip the file and return to it after completing the rest)
 2. Run `:PackerSync` anywhere in the environment
