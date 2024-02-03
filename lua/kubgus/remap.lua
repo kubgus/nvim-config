@@ -65,3 +65,7 @@ map("t", "<C-e>", "<C-\\><C-n>:q<CR>")
 map("n", "fa", ":%s/")
 map("n", "ff", ":+s/")
 map("n", "fh", ":s/")
+
+-- C++ (almost illegal)
+map("n", "cppm", "iint main() {<Enter>}<Esc>O")
+map("n", "cppn", "i#include <iostream><Enter><Enter>int main() {<Enter>}<Esc>O")
