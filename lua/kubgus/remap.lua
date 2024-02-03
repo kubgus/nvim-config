@@ -1,11 +1,3 @@
-local function map(mode, lhs, rhs, opts)
-	local options = { noremap=true, silent=true }
-	if opts then
-		options = vim.tbl_extend("force", options, opts)
-	end
-	vim.api.nvim_set_keymap(mode, lhs, rhs, options)
-end
-
 -- Change leader to space
 vim.g.mapleader = " "
 
@@ -14,58 +6,55 @@ vim.g.mapleader = " "
 ------------------------------------------------------
 
 -- Netrw easy access (project-overview)
-map("n", "<leader>po", ":Ex<CR>")
+vim.keymap.set("n", "<leader>po", vim.cmd.Ex)
 
 -- Visual move
-map("v", "J", ":m '>+1<CR>gv=gv")
-map("v", "K", ":m '<-2<CR>gv=gv")
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Append line below to current line
-map("n", "J", "mzJ`z")
+vim.keymap.set("n", "J", "mzJ`z")
 
 -- Half page jumps keep cursor in middle
-map("n", "<C-d>", "<C-d>zz")
-map("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 -- Search terms stay in middle
-map("n", "n", "nzzzv")
-map("n", "N", "Nzzzv")
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
 
 -- Yank to system clipboard
-map("n", "<leader>y", "\"+y")
-map("v", "<leader>y", "\"+y")
-map("n", "<leader>Y", "\"+Y")
+vim.keymap.set("n", "<leader>y", "\"+y")
+vim.keymap.set("v", "<leader>y", "\"+y")
+vim.keymap.set("n", "<leader>Y", "\"+Y")
 
 -- Awesomedel
-map("n", "<leader>d", "\"_d")
+vim.keymap.set("n", "<leader>d", "\"_d")
 
 -- Forbidden remaps
-map("n", "<C-c>", "V")
-map("v", "<C-c>", "<C-c>a")
-map("i", "<C-c>", "<C-c>")
+vim.keymap.set("n", "<C-c>", "V")
+vim.keymap.set("v", "<C-c>", "<C-c>a")
+vim.keymap.set("i", "<C-c>", "<C-c>")
 
 -- Tabs
-map("n", "tj", ":tabnext<CR>")
-map("n", "tk", ":tabnext -<CR>")
-map("n", "th", ":tabnext -<CR>")
-map("n", "tl", ":tabnext +<CR>")
-map("n", "tn", ":tabnew<CR>")
-
--- Panes (alternative for <C-w>)
-map("n", "<C-j>", ":wincmd j<CR>")
-map("n", "<C-k>", ":wincmd k<CR>")
-map("n", "<C-h>", ":wincmd h<CR>")
-map("n", "<C-l>", ":wincmd l<CR>")
+vim.keymap.set("n", "<leader>j", ":tabnext<CR>")
+vim.keymap.set("n", "<leader>k", ":tabnext -<CR>")
+vim.keymap.set("n", "<leader>h", ":tabnext -<CR>")
+vim.keymap.set("n", "<leader>l", ":tabnext +<CR>")
+vim.keymap.set("n", "<leader>n", ":tabnew<CR>")
 
 -- Terminal
-map("n", "<leader>t", ":ToggleTerm<CR>")
-map("t", "<C-e>", "<C-\\><C-n>:q<CR>")
+vim.keymap.set("n", "<leader>t", ":ToggleTerm<CR>")
+vim.keymap.set("t", "<C-e>", "<C-\\><C-n>:q<CR>")
 
 -- Search and replace
-map("n", "fa", ":%s/")
-map("n", "ff", ":+s/")
-map("n", "fh", ":s/")
+vim.keymap.set("n", "<leader>sara", ":%s/") -- All
+vim.keymap.set("n", "<leader>sarr", ":+s/") -- Default
+vim.keymap.set("n", "<leader>sarn", ":s/") -- Normal
 
 -- C++ (almost illegal)
-map("n", "cppm", "iint main() {<Enter>}<Esc>O")
-map("n", "cppn", "i#include <iostream><Enter><Enter>int main() {<Enter>}<Esc>O")
+vim.keymap.set("n", "<leader>cppm", "iint main() {<Enter>}<Esc>O") -- Main
+vim.keymap.set("n", "<leader>cppn", "i#include <iostream><Enter><Enter>int main() {<Enter>}<Esc>O") -- New
+
+-- README ease of use
+vim.keymap.set("n", "<leader>mdkb", "i<Enter><kbd></kbd><Esc>5hi")
