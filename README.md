@@ -60,72 +60,118 @@ Can be used in *normal mode*.
 ### basic
 
 <kbd>h</kbd> - Move cursor left
+
 <kbd>j</kbd> - Move cursor down
+
 <kbd>k</kbd> - Move cursor up
+
 <kbd>l</kbd> - Move cursor right
 
+
 <kbd>w</kbd> - Move cursor to start of next word
+
 <kbd>W</kbd> - Move cursor to start of next word (incl. punc.)
 
+
 <kbd>b</kbd> - Opposite of <kbd>w</kbd> (previous word)
+
 <kbd>B</kbd> - Opposite of <kbd>W</kbd> (previous word)
 
+
 <kbd>$</kbd> - Move cursor to the end of the line
+
 <kbd>_</kbd> - Move cursor to the first non-whitespace character of the line
+
 <kbd>0</kbd> - Move cursor to the beginning of the line
 
+
 <kbd>g</kbd><kbd>g</kbd> - Move to the first line of the document
+
 <kbd>G</kbd> - Move to the last line of the document
 
+
 <kbd>i</kbd> - Enter insert mode to the left of cursor
+
 <kbd>I</kbd> - Enter insert mode at the beginning of the line
+
 <kbd>a</kbd> - Enter insert mode at the right of the cursor
+
 <kbd>A</kbd> - Enter insert mode at the end of the line
+
 <kbd>o</kbd> - Create a new line below the cursor and enter insert mode on it
+
 <kbd>O</kbd> - Create a new line above the cursor and enter insert mode on it
 
+
 <kbd>v</kbd> - Enter visual (select) mode
+
 <kbd>V</kbd> - Enter visual line (line select) mode
 
-<kbd>p<kbd> - Paste contents of yank buffer after the cursor
+
+<kbd>p</kbd> - Paste contents of yank buffer after the cursor
+
 <kbd>P</kbd> - Paste contents of yank buffer before the cursor
 
+
 <kbd>u</kbd> - Undo
+
 <kbd>Ctrl</kbd> + <kbd>r</kbd> - Redo
 
+
 <kbd>Ctrl</kbd> + <kbd>d</kbd> - Half page scroll down
+
 <kbd>Ctrl</kbd> + <kbd>u</kbd> - Half page scroll up
 
 ### intermediate
 
 <kbd>x</kbd> - Delete single character (writes to yank buffer)
 
+
 <kbd>Y</kbd> - Yank to end of line (same as <kbd>y</kbd><kbd>$</kbd>)
+
 <kbd>D</kbd> - Delete to end of line (same as <kbd>d</kbd><kbd>$</kbd>)
 
+
 <kbd>r</kbd> - Replace single character at cursor
+
 <kbd>R</kbd> - Enter replace mode
 
+
 <kbd>}</kbd> - Move cursor forward by paragraph
+
 <kbd>{</kbd> - Move cursor backward by paragraph
+
 <kbd>)</kbd> - Similar to <kbd>}</kbd> (figure it out)
+
 <kbd>(</kbd> - Similar to <kbd>{</kbd> (figure it out)
 
+
 <kbd>f</kbd><kbd>[any]</kbd> - Move cursor to the next instance of `[any]` character in the line
+
 <kbd>F</kbd><kbd>[any]</kbd> - Opposite of <kbd>f</kbd> (previous instance of `[any]`)
+
 <kbd>t</kbd><kbd>[any]</kbd> - Move cursor up to the next instance of `[any]` character in the line
+
 <kbd>T</kbd><kbd>[any]</kbd> - Opposite of <kbd>t</kbd> (previous instance of `[any]`)
 
+
 <kbd>;</kbd> - Move forward in searching the line (<kbd>f</kbd>, <kbd>F</kbd>, <kbd>t</kbd>, <kbd>T</kbd>)
+
 <kbd>,</kbd> - Opposite of <kbd>;</kbd> (move backward)
 
+
 <kbd>/</kbd> - Load word into the search term (press <kbd>Enter</kbd> to confirm)
+
 <kbd>?</kbd> - Same as <kbd>/</kbd>, but searches backwards and flips the controls
 
+
 <kbd>*</kbd> - Load current cursor word into the search term (like when using <kbd>/</kbd>)
+
 <kbd>#</kbd> - Load current cursor word into the search term (like when using <kbd>?</kbd>)
 
+
 <kbd>n</kbd> - Move forward in searching the document (search term)
+
 <kbd>N</kbd> - Opposite of <kbd>n</kbd> (move backward)
 
 ## vim commands
@@ -135,7 +181,7 @@ Can be used in *normal mode*.
 - Combine with any other motion to yank from the old to new cursor position
 - Yanking puts the deleted contents into the yank buffer
 
-<kbd>d<kbd> - Delete
+<kbd>d</kbd> - Delete
 - Combine with itself to delete the whole line
 - Combine with any other motion to delete from the old to new cursor position
 - Deleting puts the deleted contents into the yank buffer
@@ -158,11 +204,14 @@ Can be used in *normal mode*.
 ## config specific
 
 `-- VISUAL --` <kbd>J</kbd> - Move selected text down
+
 `-- VISUAL --` <kbd>K</kbd> - Move selected text up
 
-<kbd>Space</kbd><kbd>y<kbd> - Yank to system clipboard
-<kbd>Space</kbd><kbd>Y<kbd> - Yank from cursor to end of line to system clipboard
-<kbd>Space</kbd><kbd>d<kbd> - Same as <kbd>"</kbd><kbd>_</kbd><kbd>d</kbd>
+
+<kbd>Space</kbd><kbd>y</kbd> - Yank to system clipboard
+
+<kbd>Space</kbd><kbd>Y</kbd> - Yank from cursor to end of line to system clipboard
+
+<kbd>Space</kbd><kbd>d</kbd> - Same as <kbd>"</kbd><kbd>_</kbd><kbd>d</kbd>
 
 Find more in the `lua/kubgus/remap.lua` file!
-
